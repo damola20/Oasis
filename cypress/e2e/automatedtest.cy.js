@@ -6,6 +6,8 @@ describe("this is an automated tests that creates task, assign tasks and set due
         cy.get("button[type='submit']").click()
     })
     it("create tasks", () =>{
-        
+        cy.get(".cu-task-list-header__add.ng-star-inserted").click()
+        cy.get("input[placeholder='Task Name']").type("New task")
+        cy.get(".cu-task-row-new__save-text").click()
     })
 })
